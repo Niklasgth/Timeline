@@ -1,12 +1,18 @@
 import React from "react";
-import Timeline from "./components/Timeline";
+import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
+import Timeline from "./components/timeline/Timeline";
+import "./styles/global.css";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Min Tidslinje</h1>
-      <Timeline />
-    </div>
+    <>
+      <Header />
+      <main>
+        <Timeline />
+      </main>
+      <Footer />
+    </>
   );
 }
 
