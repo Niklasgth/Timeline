@@ -1,0 +1,39 @@
+[
+    {
+        "year": 1434,
+        "time": "Midsommar",
+        "event": "Upproret i Dalarna mot fogden Jösse Eriksson",
+        "place": "Borganäs (Borlänge)",
+        "details": "Fogden Jösse Eriksson, även känd som Jens Lykke Erikson, tillskrivs anledningen till detta uppror på grund av hans hårdföra sätt."
+    },
+    {
+        "year": 1434,
+        "time": "Sommar",
+        "event": "Engelbrekt bränner borgen i Köping",
+        "place": "Köping (Västmanland)",
+        "details": ""
+    },
+    {
+        "year": 1434,
+        "time": "Sommar",
+        "event": "Engelbrekt intar Västerås",
+        "place": "Västerås (Västmanland)",
+        "details": ""
+    },
+
+    {
+        "year": 1434,
+        "time": "Sommar",
+        "event": "Örebro slott kapitulerar",
+        "place": "Örebro (Närke)",
+        "details": ""
+    },
+
+    {
+        "year": 1436,
+        "time": "4 maj",
+        "event": "Engelbrekt mördas vid Göksholm",
+        "place": "Göksholm",
+        "details": "Engelbrekt Engelbrektsson blev mördad av Måns Bengtsson (Natt och Dag) den 4 maj 1436."
+    }
+]

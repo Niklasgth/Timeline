@@ -1,0 +1,25 @@
+[
+    { 
+        "year": 1303, 
+        "event": "Heliga Birgitta föds." 
+    },
+
+    { 
+        "year": 1349, 
+        "event": "Birgitta flyttar till Rom." 
+    },
+
+    { 
+        "year": 1370, 
+        "event": "Påven godkänner Birgittinorden." 
+    },
+
+    { 
+        "year": 1373, 
+        "event": "Birgitta dör i Rom." 
+    },
+
+    { 
+        "year": 1391, 
+        "event": "Heliga Birgitta helgonförklaras." }
+]
