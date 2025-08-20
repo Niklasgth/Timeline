@@ -1,4 +1,4 @@
-package com.timeline.timeline;
+package com.app.timeline;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

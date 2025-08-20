@@ -1,7 +1,7 @@
-package com.app.timeline.model;
+package com.app.timeline.service;
 
 
-import com.timeline.timeline.model.TimelineEvent;
+import com.app.timeline.model.TimelineEvent;
 import org.springframework.stereotype.Service;
 import java.util.List;  
 
