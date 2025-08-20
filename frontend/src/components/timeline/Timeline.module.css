@@ -1,0 +1,96 @@
+/* Timeline.module.css */
+
+/* Container för tidslinjen */
+.timelineContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+/* Själva tidslinjen */
+.timeline {
+  position: relative;
+  width: 70%;
+  max-width: 1000px;
+  padding: 40px 0;
+  background-color: rgba(255, 215, 0, 0.2);
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+}
+
+/* Vertikal linje för tidslinjen */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  background-color: var(--color-accent);
+  border-radius: 3px;
+  z-index: 0;
+}
+
+/* Tidslinjeobjekt */
+.timelineItem {
+  position: relative;
+  margin-left: 50px;
+  margin-bottom: 30px;
+  padding: 20px 30px;
+  background: var(--color-primary);
+  border-left: 6px solid var(--color-accent);
+  border-radius: 8px;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.timelineItem:hover {
+  transform: scale(1.05);
+}
+
+/* Cirklar vid varje händelse */
+.timelineItem::before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 50%;
+  width: 24px;
+  height: 24px;
+  background-color: var(--color-accent);
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+/* Text i tidslinjen */
+.timelineYear {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--color-bg);
+  margin-bottom: 8px;
+}
+
+.timelineEvent,
+.timelinePlace,
+.timelineDetail {
+  font-size: 16-18px;
+  color: var(--color-bg);
+  margin-top: 5px;
+}
+
+/* Responsivt */
+@media (max-width: 768px) {
+  .timeline {
+    width: 90%;
+  }
+
+  .timelineItem {
+    margin-left: 20px;
+    padding: 15px 25px;
+  }
+}

@@ -1,0 +1,36 @@
+
+.header {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 15px 0;
+}
+
+.navBtn {
+  color: white;
+  text-decoration: none;
+  padding: 12px 25px;
+  background-color: var(--color-dark);
+  border-radius: 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 2px solid var(--color-accent);
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.navBtn:hover {
+  background-color: #34495e;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+}
