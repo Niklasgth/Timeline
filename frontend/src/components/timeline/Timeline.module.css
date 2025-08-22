@@ -9,6 +9,7 @@
   white-space: nowrap;       /* förhindrar radbrytning */
   scrollbar-width: thin;     /* tunn scrollbar i Firefox */
   -webkit-overflow-scrolling: touch; /* smooth scroll på touch */
+   padding-bottom: 60px; /* ungefär lika som footerns padding */
 }
 
 /* Chrome, Edge, Safari */
