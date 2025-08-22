@@ -3,7 +3,8 @@ Tar bort helt tomma events
 Lägger till unikt id för Reacts key
 Fyller i default-värden för saknade fält*/
 
-import type { TimelineEvent } from "../components/timeline/Timeline";
+import type { TimelineEvent } from "../components/timeline/Timeline.types";
+
 
 
 export function processEvents(events: TimelineEvent[]): TimelineEvent[] {

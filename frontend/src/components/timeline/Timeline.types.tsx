@@ -1,5 +1,5 @@
 export type TimelineEvent = {
-  id?: string;     
+  id?: string;
   year: string;
   time: string;
   event: string;
