@@ -9,9 +9,6 @@ type NavbarProps = {
 const Navbar: React.FC<NavbarProps> = ({ themes, onSelectTheme }) => {
   return (
     <nav className={styles.navbar}>
-  <div className={styles.dropdown}>
-    <button className={styles.navBtn}>Välj tema</button>
-    <div className={styles.dropdownContent}>
       {themes.map((theme) => (
         <button
           key={theme}
@@ -21,9 +18,7 @@ const Navbar: React.FC<NavbarProps> = ({ themes, onSelectTheme }) => {
           {theme}
         </button>
       ))}
-    </div>
-  </div>
-</nav>
+    </nav>
   );
 };
 

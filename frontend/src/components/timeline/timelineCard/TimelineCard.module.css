@@ -1,0 +1,78 @@
+.card {
+  background-color: var(--color-dark);
+  color: var(--color-text);
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  display: inline-block;       /* kort i rad */
+  vertical-align: top;
+  box-sizing: border-box;      /* inkluderar padding i bredden */
+  min-width: 250px;            /* lite bredare */
+  max-width: 400px;            /* så de inte blir gigantiska */
+  width: 30%;                  /* flexibelt, beroende på container */
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.year {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.event {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+.place {
+  font-style: italic;
+  margin-bottom: 0.5rem;
+   word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+.detail {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--color-accent);
+  display: none;            /* visas vid klick */
+  max-height: 150px;        /* maxhöjd */
+  overflow-y: auto;         /* scroll vid överflödig text */
+  word-wrap: break-word; 
+  overflow-wrap: break-word; 
+  white-space: normal;
+  padding-right: 0.5rem;
+}
+
+
+/* scroll-stil för moderna webbläsare */
+.detail::-webkit-scrollbar {
+  width: 6px;
+}
+
+.detail::-webkit-scrollbar-thumb {
+  background-color: var(--color-accent);
+  border-radius: 3px;
+}
+
+.detailVisible {
+  display: block;
+}
+
+.moreHint {
+  font-size: 0.85rem;
+  color: var(--color-bg);
+  margin-top: 0.3rem;
+  font-style: italic;
+}

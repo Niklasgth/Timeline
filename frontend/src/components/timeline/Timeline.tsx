@@ -2,15 +2,8 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Timeline.module.css";
 import { processEvents } from "../../utils/timelineUtils";
-
-export type TimelineEvent = {
-  id?: string;        // nyckel för React
-  year: string;
-  time: string;
-  event: string;
-  place: string;
-  detail: string;
-};
+import TimelineCard from "./timelineCard/TimelineCard";
+import type { TimelineEvent } from "./Timeline.types";
 
 type TimelineProps = {
   theme: string;
@@ -20,6 +13,7 @@ const Timeline: React.FC<TimelineProps> = ({ theme }) => {
   const [events, setEvents] = useState<TimelineEvent[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [openCardId, setOpenCardId] = useState<string | null>(null);
 
   useEffect(() => {
     setLoading(true);
@@ -29,8 +23,9 @@ const Timeline: React.FC<TimelineProps> = ({ theme }) => {
         return res.json();
       })
       .then((data: TimelineEvent[]) => {
-        setEvents(processEvents(data)); // lägg till id och eventuell logik
+        setEvents(processEvents(data));
         setLoading(false);
+        setOpenCardId(null); // stänger alla kort vid nytt tema
       })
       .catch((err) => {
         console.error(err);
@@ -39,21 +34,22 @@ const Timeline: React.FC<TimelineProps> = ({ theme }) => {
       });
   }, [theme]);
 
+  const handleToggleCard = (id: string) => {
+    setOpenCardId(openCardId === id ? null : id);
+  };
+
   if (loading) return <p>Laddar tidslinje...</p>;
   if (error) return <p>Fel: {error}</p>;
 
   return (
     <div className={styles.timelineContainer}>
       {events.map((event) => (
-        <div className={styles.timelineItem} key={event.id}>
-          <h3 className={styles.timelineYear}>
-            {event.year}
-            {event.time && ` - ${event.time}`}
-          </h3>
-          <p className={styles.timelineEvent}>{event.event}</p>
-          {event.place && <p className={styles.timelinePlace}>Plats: {event.place}</p>}
-          {event.detail && <p className={styles.timelineDetail}>{event.detail}</p>}
-        </div>
+        <TimelineCard
+          key={event.id}
+          event={event}
+          isOpen={openCardId === event.id}
+          onToggle={() => handleToggleCard(event.id!)}
+        />
       ))}
     </div>
   );

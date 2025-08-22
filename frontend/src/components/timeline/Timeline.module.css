@@ -1,12 +1,28 @@
-/* Timeline.module.css */
 
 /* Container för tidslinjen */
 .timelineContainer {
   display: flex;
-  justify-content: center;
-  margin-top: 20px;
+  flex-direction: row;       /* horisontell */
+  overflow-x: auto;          /* scroll vid overflow */
   padding: 20px;
-  flex-wrap: wrap;
+  gap: 1rem;
+  white-space: nowrap;       /* förhindrar radbrytning */
+  scrollbar-width: thin;     /* tunn scrollbar i Firefox */
+  -webkit-overflow-scrolling: touch; /* smooth scroll på touch */
+}
+
+/* Chrome, Edge, Safari */
+.timelineContainer::-webkit-scrollbar {
+  height: 10px;              /* horisontell scrollbar */
+}
+
+.timelineContainer::-webkit-scrollbar-thumb {
+  background-color: var(--color-accent);
+  border-radius: 5px;
+}
+
+.timelineContainer::-webkit-scrollbar-track {
+  background-color: var(--color-primary);
 }
 
 /* Själva tidslinjen */
@@ -46,6 +62,8 @@
   box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
   z-index: 1;
+  display: inline-block; /* så korten ligger horisontellt */
+  vertical-align: top;
 }
 
 .timelineItem:hover {
@@ -78,9 +96,11 @@
 .timelineEvent,
 .timelinePlace,
 .timelineDetail {
-  font-size: 16-18px;
+  font-size: 16px;
   color: var(--color-bg);
   margin-top: 5px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Responsivt */
