@@ -1,6 +1,7 @@
 # Tidslinjeprojekt
 
 Detta är ett React + Spring Boot-projekt som visar historiska händelser i en interaktiv tidslinje. 
+
 Datan i json filerna för projektet är från mina föreläsningsanteckningar under min kurs på guidelinjen i Vadstena.
 
 ## Funktioner
